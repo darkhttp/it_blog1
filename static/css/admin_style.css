@@ -1,0 +1,15 @@
+body{
+background-color: white;
+color: black;
+}
+textarea,select,input{
+padding:20px;
+width:100%;
+color:black;
+   border-color:black;
+   border-radius:20px;
+}
+a{
+color: black;
+font-size:16px;
+}
