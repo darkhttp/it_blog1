@@ -1,0 +1,15 @@
+{% extends "base_admin.html" %}
+{% block content %}
+    {% for new in news %}
+    <div class="container-fluid">
+        <div class="col-md-4"> <a href="{% url 'news_detail_admin' new.id %}">{{new.news}}</a></div>
+
+        <div class="col-md-4"><a href="{% url 'news_delete' new.id %}">Удалить</a></div>
+        <div class="col-md-4"><a href="{% url 'news_update' new.id %}">Редактировать</a></div>
+
+    </div>
+    <br>
+    {% endfor %}
+    <a href="{% url 'news_create' %}"><button type="submit" class="base_margin btn btn-success btn-lg"><i class = "fa fa-sign-in"></i>Добавить</button></a>
+
+{% endblock %}

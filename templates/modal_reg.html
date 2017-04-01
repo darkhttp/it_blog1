@@ -1,0 +1,29 @@
+<div class="modal fade" id='modal-2'>
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" type ="button" data-dismiss = 'modal'>&times;</button>
+				<h4 class="modal-title">Регистрация</h4>
+			</div>
+			<div class="modal-body">
+				{% if not user.is_authenticated %}
+                       <form method="post" role="form" action="#modal-2" id="">
+                           {% include 'inc-registration_form.html' %}
+                            <button type="submit" class="base_margin btn btn-success btn-lg "  onclick=""value=""><i class = "fa fa-sign-in"></i>Зарегистрироваться</button>
+                         <br/>
+                       </form>
+
+
+                    {% else %}
+                    <form class="navbar-form">
+                        <p class="text-success ">Здраствуйте: <b class="text-primary">{{ user.username }}</b></p> <p class="text-success ">Вы можете выйти: <a class="text-primary" href="/user/logout/">logout</a></p>
+
+                    </form>
+                    {% endif %}
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-danger" type = "button" data-dismiss='modal'>Отмена</button>
+			</div>
+		</div>
+    </div>
+</div>

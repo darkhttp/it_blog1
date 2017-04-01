@@ -1,0 +1,48 @@
+{%extends "base_news.html"%}
+{% load staticfiles %}
+{% block title%}
+Работа
+{% endblock %}
+{% block h_2 %}Всё из мира высоких технологий {% endblock %}
+  {% block content %}
+  <section>
+	<div class="container-fluid">
+		<div class="row">
+
+
+			<div class="col-xs-12 col-md-12"><h3 class="text-center">{{f_nw.news.name}}</h3></div>
+			<div class="col-xs-12 col-md-12">
+	        	<div class="block_info">
+	        		<div class="foto_info">
+	        			{% load staticfiles %}
+            			<img class="img_big" src="{{f_nw.news.img.url}}">
+	        		</div>
+
+
+						<p>{{f_nw.desc_all_1}}</p>
+						{% if f_nw.img_1 %}
+						<p class="text-center"><img src="{{ MEDIA_URL }}{{ f_nw.img_1.url }}"></p>
+						{% endif %}
+						<p>{{f_nw.desc_all_2}}</p>
+						{% if f_nw.img_2 %}
+							<p class="text-center"><img class="img_big" src="{{f_nw.img_2.url}}"></p>
+						{% endif %}
+						<p>{{f_nw.desc_all_3}}</p>
+						{% if f_nw.img_3 %}
+							<p class="text-center"><img src="{{f_nw.img_3.url}}"></p>
+						{% endif %}
+						<p>{{f_nw.desc_all_4}}</p>
+						{% if f_nw.img_4 %}
+							<p class="text-center"><img src="{{f_nw.img_4.url}}"></p>
+						{% endif %}
+							<p>{{f_nw.desc_all_5}}</p>
+					</div>
+	        </div>
+
+
+
+		</div>
+	</div>
+  </section>
+  {% endblock %}
+

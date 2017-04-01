@@ -1,0 +1,23 @@
+{% csrf_token %}
+<div class="container-fluid">
+
+        <span class="hidden" id="user_id">{{ id }}</span>
+
+            {% for field in form %}
+            <div class="form-group  ">
+                <label class="control-label col-xs-12 ">{{ field.label_tag }}</label>
+
+                <div class="col-md-8">
+                    {% for error in field.errors %}
+                        <li class="error">errors:{{ error }}</li>
+                    {% endfor %}
+                    {{ field }}
+                    <br/>
+                </div>
+
+            </div>
+        {% endfor %}
+
+
+
+</div>

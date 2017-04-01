@@ -1,0 +1,12 @@
+{% extends "base_registration.html" %}
+{% block h_1 %}Регистрация
+    {% endblock %}
+{% block content %}
+<br/>
+    <form method="post" role="form" action="/user/registration/">
+        {% include 'inc-registration_form.html' %}
+        <button type="submit" class="base_margin btn btn-success btn-lg flex_box " value=""><i class = "fa fa-sign-in"></i>Зарегистрироваться</button>
+        <br/>
+    </form>
+<br/>
+{% endblock %}

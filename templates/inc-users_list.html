@@ -1,0 +1,17 @@
+{% for user in users %}
+<div class="container">
+    <div class="col-md-4"><p>{{ user }}</p></div>
+    <div class="col-md-4">  <button type="button" class="btn btn-success" aria-label="Edit"
+                onclick="fill_form({{ user.id }})">
+            Данные о пользователе
+        </button>
+    </div>
+    <div class="col-md-4">
+        <a href="delete/user/{{ user.id }}" class="btn btn-success ">
+            Удалить
+        </a>
+
+    </div>
+</div>
+<br/>
+{% endfor %}

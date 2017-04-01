@@ -1,0 +1,7 @@
+{% extends "base_admin.html" %}
+{% block content %}
+    <form  method="post" enctype="multipart/form-data" action="">{% csrf_token %}
+        {% include 'inc_news_add.html' %}
+        <input type="submit" class="btn btn-success" value="Создать">
+    </form>
+{% endblock %}

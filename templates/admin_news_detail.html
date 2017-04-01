@@ -1,0 +1,47 @@
+{% extends "base_admin.html" %}
+{% block content %}
+			{% if news%}
+			<div class="col-xs-12 col-md-12"><h3 class="text-center">{{news.news.name}}</h3></div>
+			<div class="col-xs-12 col-md-12">
+	        	<div class="block_info">
+	        		<div class="foto_info">
+	        			{% load staticfiles %}
+            			<img class="img_big" src="{{news.news.img.url}}">
+	        		</div>
+
+
+						<p>{{news.desc_all_1}}</p>
+						{% if news.img_1 %}
+						<p class="text-center"><img src="{{ MEDIA_URL }}{{news.img_1.url }}"></p>
+						{% endif %}
+						<p>{{news.desc_all_2}}</p>
+						{% if news.img_2 %}
+							<p class="text-center"><img class="img_big" src="{{news.img_2.url}}"></p>
+						{% endif %}
+						<p>{{news.desc_all_3}}</p>
+						{% if news.img_3 %}
+							<p class="text-center"><img src="{{news.img_3.url}}"></p>
+						{% endif %}
+						<p>{{news.desc_all_4}}</p>
+						{% if news.img_4 %}
+							<p class="text-center"><img src="{{news.img_4.url}}"></p>
+						{% endif %}
+							<p>{{news.desc_all_5}}</p>
+					</div>
+	        </div>
+			{%else%}
+			<div class="col-xs-12 col-md-12"><h3 class="text-center">{{news.news.name}}</h3></div>
+			<div class="col-xs-12 col-md-12">
+	        	<div class="block_info">
+	        		<div class="foto_info">
+	        			{% load staticfiles %}
+            			<img class="img_big" src="{{short.img.url}}">
+	        		</div>
+
+
+						<p>{{short.desc}}</p>
+
+					</div>
+	        </div>
+{%endif%}
+{% endblock %}
