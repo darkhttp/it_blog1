@@ -25,7 +25,7 @@ from django.conf.urls import include, url
 
 urlpatterns = [
 
-    #url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     url(r'^$',main),
     url(r'^smartphone$', smartphone ,name = 'smartphone'),
     url(r'^programm$', programm,name = 'programm'),
@@ -35,10 +35,10 @@ urlpatterns = [
     url(r'^user/login/$',login),
     url(r'^user/logout/$',logout),
     url(r'^user/registration/$', registration),
-    url(r'^admin/$', admin_page, name='admin_users'),
-    url(r'^admin/delete/user/(\d+)$', delete_user),
-    url(r'^admin/get_user_form/(\d+)$', get_user_form),
-    url(r'^admin/create/user/(\d*)$', create_user),
+    #url(r'^admin/$', admin_page, name='admin_users'),
+    #url(r'^admin/delete/user/(\d+)$', delete_user),
+    #url(r'^admin/get_user_form/(\d+)$', get_user_form),
+    #url(r'^admin/create/user/(\d*)$', create_user),
 
 
 ]
@@ -62,5 +62,5 @@ urlpatterns += [
 
 
 if settings.DEBUG:
-    # static files (images, css, javascript, etc.)
+    #static files (images, css, javascript, etc.)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
